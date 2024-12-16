@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import NavBar from "./components/nav";
 import About from "./components/about";

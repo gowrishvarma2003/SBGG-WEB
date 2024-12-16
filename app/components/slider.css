@@ -1,0 +1,26 @@
+@keyframes move-left-right {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(25px); /* Slight movement to the right */
+    }
+  }
+  
+  .triangle-animation {
+    animation: move-left-right 3.5s infinite ease-in-out;
+  }
+  
+  /* Staggered animation timings for randomness */
+  .triangle-1 {
+    animation-delay: 0s;
+  }
+  
+  .triangle-2 {
+    animation-delay: 0.5s;
+  }
+  
+  .triangle-3 {
+    animation-delay: 2s;
+  }
+  

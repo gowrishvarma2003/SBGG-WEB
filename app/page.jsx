@@ -5,6 +5,8 @@ import About from "./components/about";
 import Slider from "./components/slider";
 import Services from "./components/services";
 import Testimonies from "./components/testimonies";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       <Slider />
       <About />
       <Services />
-      <Testimonies />
+      {/* <Testimonies /> */}
+      <Contact />
+      <Footer />
     </>
   );
 }

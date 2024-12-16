@@ -122,7 +122,6 @@ const Slider = () => {
                 className={`w-full h-full object-cover transition-opacity duration-1000 ${fade ? 'opacity-100' : 'opacity-0'}`}
               />
             </div>
-            {/* display name of it */}
             <div className="w-full h-12 flex items-center justify-center my-3">
               <h1 className="text-black text-3xl font-bold">{slides[currentSlide].alt.toUpperCase()}</h1>
             </div>

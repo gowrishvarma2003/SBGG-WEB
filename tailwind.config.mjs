@@ -13,5 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
     },
-  }
+  },
+  plugins: [
+    require('flowbite/plugin'),
+  ],
 };

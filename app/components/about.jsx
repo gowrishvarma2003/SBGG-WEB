@@ -7,7 +7,7 @@ const About = () => {
             <div className="relative h-screen">
                 {/* First Div with Background Image */}
                 <div
-                    className="bg-cover bg-center h-full"
+                    className="bg-cover bg-center h-full bg-gray-100 relative"
                     style={{ backgroundImage: 'url("/Frame.png")' }}
                 >
                     <div className="flex flex-col items-center h-full p-8">
@@ -30,8 +30,14 @@ const About = () => {
 
                 {/* Second Div Positioned Absolutely */}
                 <div
-                    className="absolute bg-white shadow-lg rounded-lg p-3 mt-80 mx-auto z-20 flex justify-center"
-                    style={{ width: '50%', color: '#052A47', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                    className="absolute bg-white shadow-lg rounded-lg p-2 mt-80 mx-auto z-20 flex justify-center"
+                    style={{
+                        width: '50%',
+                        color: '#052A47',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                    }}
                 >
                     <img
                         src="/about.png"
@@ -41,6 +47,9 @@ const About = () => {
                     />
                 </div>
             </div>
+
+            {/* Extra Space to Avoid Overlap */}
+            <div className="h-96"></div>
         </>
     );
 };

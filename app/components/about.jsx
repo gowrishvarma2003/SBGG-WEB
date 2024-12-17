@@ -10,7 +10,7 @@ const About = () => {
 				>
 					<div className="flex flex-col items-center h-full p-8">
 						<h1
-							className="text-xl sm:text-xl bsm:text-2xl lg:text-3xl xl:text-4xl mb-4 pb-4"
+							className="text-2xl lg:text-3xl xl:text-4xl mb-4 pb-4"
 							style={{ color: "#4DBF38" }}
 						>
 							ABOUT<span className="font-bold pl-4">US</span>

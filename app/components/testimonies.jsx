@@ -43,11 +43,11 @@ const Testimonies = () => {
     <div className="relative bg-cover bg-center h-screen justify-center" style={{ backgroundImage: "url('/testimonials_background.png')" }}>
       <div className="absolute inset-0 bg-white opacity-90"></div>
       <div className="relative z-10 flex flex-col items-center h-full text-black">
-        <h1 className="text-4xl font-bold mb-4 pt-20" style={{ color: '#4DBF38' }}>Testimonials</h1>
+        <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 pt-20" style={{ color: '#4DBF38' }}>Testimonials</h1>
         <img src="/logos/testimonies.png" alt="Testimonials Logo" className="w-10 pt-10" />
         <div className="relative h-full w-1/2 flex flex-col items-center justify-start mt-8">
           <div className={`transition-opacity duration-1000 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="text-lg text-center pt-4 h-56" style={{ color: '#7F7F7F' }}>
+            <p className="sm:text-sm bsm:text-base lg:text-lg text-center pt-4 h-72 bsm:h-56 overflow-y-scroll pr-3 thin-scrollbar" style={{ color: '#7F7F7F' }}>
               {testimonies[currentSlide].text}
             </p>
             <h2 className="text-lg font-bold text-center pt-4 mt-4" style={{ color: '#052A47' }}>

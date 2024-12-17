@@ -29,14 +29,14 @@ const Contact = () => {
 					}}
 				></div>
 				<div
-					className="w-7/12 h-full bg-[#052A47F2] opacity-90 z-2 absolute flex items-center justify-center"
+					className="w-full p-8 lg:p-0 md:w-10/12 lg:w-7/12 h-full bg-[#052A47F2] opacity-90 z-2 absolute flex items-center justify-center"
 					style={{ zIndex: 2 }}
 				>
-					<div className="w-4/5 h-auto flex-col pl-48">
-						<h1 className="text-4xl mb-5" style={{ color: "#4DBF38" }}>
+					<div className="w-full lg:w-4/5 h-auto flex-col pl-0 md:pl-24 lg:pl-48">
+						<h1 className="text-2xl lg:text-3xl xl:text-4xl mb-5" style={{ color: "#4DBF38" }}>
 							CONTACT <span className="font-bold">US</span>
 						</h1>
-						<p className="text-white text-lg">
+						<p className="text-white sm:text-sm bsm:text-base md:text-lg lg:text-xl h-28 pr-6 overflow-y-scroll">
 							Shripanchami Global Gears are here to support your
 							business with high-quality machinery and exceptional
 							customer service. Whether you have questions about
@@ -77,7 +77,7 @@ const Contact = () => {
                             ></textarea>
                             <button
                                 type="submit"
-                                className="w-1/2 h-10 mt-5 text-white rounded"
+                                className="w-1/2 h-10 mt-5 text-white rounded text-base"
                                 style={
                                     { 
                                         backgroundColor: "#4DBF38",

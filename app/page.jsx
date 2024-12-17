@@ -17,11 +17,11 @@ export default function Home() {
       <Slider />
       <About />
       <Services />
-      {/* <Products />
+      <Products />
       <Testimonies />
       <PricingCard />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

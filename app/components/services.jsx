@@ -55,7 +55,7 @@ const Services = () => {
 	return (
 		<div className="w-full p-8 flex flex-col justify-center items-center mb-8">
 			<h1 className="text-2xl lg:text-3xl xl:text-4xl" style={{ color: "#4DBF38" }}>
-				ABOUT<span className="font-bold pl-4">US</span>
+				ABOUT<span className="font-bold pl-2">US</span>
 			</h1>
 			<p
 				className="justify-center text-center bsm:w-3/4 sm:text-base bsm:text-lg md:text-xl lg:text-2xl mt-4 pt-4 mb-10"

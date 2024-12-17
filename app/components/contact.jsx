@@ -36,7 +36,7 @@ const Contact = () => {
 						<h1 className="text-2xl lg:text-3xl xl:text-4xl mb-5" style={{ color: "#4DBF38" }}>
 							CONTACT <span className="font-bold">US</span>
 						</h1>
-						<p className="text-white sm:text-sm bsm:text-base md:text-lg lg:text-xl h-28 pr-6 overflow-y-scroll">
+						<p className="text-white sm:text-sm bsm:text-base md:text-lg lg:text-xl h-28 pr-6 overflow-y-scroll thin-scrollbar">
 							Shripanchami Global Gears are here to support your
 							business with high-quality machinery and exceptional
 							customer service. Whether you have questions about

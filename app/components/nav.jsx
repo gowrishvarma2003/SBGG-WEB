@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import { useState } from "react";
 
@@ -11,7 +12,7 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className="p-4 w-full min-h-14">
+        <nav className="p-4 w-full min-h-14 shadow-lg">
             <div className="h-full flex flex-col lg:flex-row lg:justify-end gap-3">
                 <div className="flex lg:flex-1 sm:justify-center lg:justify-end items-center">
                     <img
@@ -34,11 +35,10 @@ export default function NavBar() {
                                     </a>
                                 </Link>
                                 <div
-                                    className={`h-1 w-full ${
-                                        item.isActive
-                                            ? "border-t-4 border-[#4DBF38]"
-                                            : "border-t-2 border-neutral-200"
-                                    }`}
+                                    className={`h-1 w-full ${item.isActive
+                                        ? "border-t-4 border-[#4DBF38]"
+                                        : "border-t-2 border-neutral-200"
+                                        }`}
                                 ></div>
                             </div>
                         ))}

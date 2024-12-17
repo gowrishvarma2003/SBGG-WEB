@@ -1,26 +1,147 @@
 @keyframes move-left-right {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(25px); /* Slight movement to the right */
-    }
-  }
-  
-  .triangle-animation {
-    animation: move-left-right 3.5s infinite ease-in-out;
-  }
-  
-  /* Staggered animation timings for randomness */
-  .triangle-1 {
-    animation-delay: 0s;
-  }
-  
-  .triangle-2 {
-    animation-delay: 0.5s;
-  }
-  
-  .triangle-3 {
-    animation-delay: 2s;
-  }
-  
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(25px); /* Slight movement to the right */
+	}
+}
+
+.triangle-animation {
+	animation: move-left-right 3.5s infinite ease-in-out;
+}
+
+.triangle-1,
+.triangle-2,
+.triangle-3 {
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.triangle-1 {
+	animation-delay: 0s;
+	opacity: 0.25;
+	transform: translateX(-1%);
+}
+
+.triangle-2 {
+	animation-delay: 0.5s;
+	opacity: 0.3;
+}
+
+.triangle-3 {
+	animation-delay: 2s;
+	opacity: 0.75;
+}
+
+@media (max-width: 319px) {
+	.triangle-1 {
+		background-size: 150% 100%;
+		scale: 1.5;
+	}
+
+	.triangle-2 {
+		background-size: 150% 100%;
+		scale: 1.5;
+	}
+
+	.triangle-3 {
+		background-size: 150% 100%;
+		scale: 1;
+	}
+}
+
+@media (min-width: 320px) {
+	.triangle-1 {
+		background-size: 150% 100%;
+		scale: 1.5;
+	}
+
+	.triangle-2 {
+		background-size: 150% 100%;
+		scale: 1.5;
+	}
+
+	.triangle-3 {
+		background-size: 150% 100%;
+		scale: 1;
+	}
+	.arrow-content {
+		display: none;
+	}
+}
+
+@media (min-width: 544px) {
+	.triangle-1 {
+		background-size: 150% 100%;
+		scale: 1.3;
+	}
+
+	.triangle-2 {
+		background-size: 150% 100%;
+		scale: 1.2;
+	}
+
+	.triangle-3 {
+		background-size: 150% 100%;
+		scale: 1;
+	}
+	.arrow-content {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	.triangle-1 {
+		background-size: 110% 100%;
+		scale: 1.3;
+	}
+
+	.triangle-2 {
+		background-size: 110% 100%;
+		scale: 1.2;
+	}
+
+	.triangle-3 {
+		background-size: 110% 100%;
+		scale: 1;
+	}
+}
+
+@media (min-width: 1024px) {
+	.triangle-1 {
+		background-size: 85% 100%;
+		scale: 1.3;
+	}
+
+	.triangle-2 {
+		background-size: 85% 100%;
+		scale: 1.2;
+	}
+
+	.triangle-3 {
+		background-size: 85% 100%;
+		scale: 1;
+	}
+}
+
+@media (min-width: 1280px) {
+	.triangle-1 {
+		background-size: 70% 100%;
+		scale: 1.3;
+	}
+
+	.triangle-2 {
+		background-size: 70% 100%;
+		scale: 1.25;
+	}
+
+	.triangle-3 {
+		background-size: 70% 100%;
+		scale: 1.1;
+	}
+}
+
+@media (min-width: 1536px) {
+}

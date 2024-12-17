@@ -4,7 +4,6 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
@@ -12,9 +11,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+				sm: "320px",
+				bsm: "544px",
+			},
+      fontSize: {
+				ssm: "0.625rem",
+			},
     },
   },
   plugins: [
-    require('flowbite/plugin'),
   ],
 };

@@ -7,6 +7,8 @@ import Services from "./components/services";
 import Testimonies from "./components/testimonies";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import PricingCard from "./components/pricing";
+import Products from "./components/products";
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
       <Slider />
       <About />
       <Services />
-      {/* <Testimonies /> */}
+      <Products />
+      <Testimonies />
+      <PricingCard />
       <Contact />
       <Footer />
     </>

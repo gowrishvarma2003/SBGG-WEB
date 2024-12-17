@@ -15,7 +15,6 @@ const Testimonies = () => {
                     <h2 className="text-lg font-bold justify-center text-center pt-4 " style={{ color: '#052A47' }}>CRAIG</h2>
                     <p className="justify-center text-center pt-" style={{ color: '#7F7F7F' }}>Bussiness man</p>
                 </div>
-                <PricingCard />
             </div>
         </>
     );

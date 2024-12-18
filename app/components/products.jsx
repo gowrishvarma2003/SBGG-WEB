@@ -125,7 +125,7 @@ const Products = () => {
 									</div>
 									<div className="w-14 h-36 flex items-start justify-center py-2 relative">
 										<Link
-											href={`/products/${product["Product Category"]}/${product["Product Name"]}`}
+											href={`/machine?name=${product["Product Name"]}`}
 											className="z-20"
 										>
 											<div className="w-14 h-14 flex justify-center items-center rounded-full border border-[#4DBF38] bg-[#4DBF38] hover:bg-white bg-opacity-25 cursor-pointer relative z-30">

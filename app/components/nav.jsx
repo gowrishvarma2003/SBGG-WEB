@@ -12,7 +12,7 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className="p-4 w-full min-h-14 shadow-lg">
+        <nav className="p-4 w-full min-h-14 shadow-lg fixed top-0 z-50 bg-white opacity-90">
             <div className="h-full flex flex-col lg:flex-row lg:justify-end gap-3">
                 <div className="flex lg:flex-1 sm:justify-center lg:justify-end items-center">
                     <img

@@ -1,32 +1,17 @@
 'use client';
 import React from "react";
+import { useSearchParams } from "next/navigation";
 import NavBar from "../components/nav";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
+import data from "../components/data.json";
 
 const Machine = () => {
-    const machine = {
-        "Product Image": "MHWFM.png",
-        "Product Name": "MULTI-HEAD WEIGH FILLING MACHINE",
-        "Packing Range": "20gm to 1kg, 2kg to 5kg",
-        "Sealing type": "center / side seal",
-        "Packing Speed": "Upto 40-100 PPM, depends on, nature of material or Heads",
-        "Filling System": "Multi head weigher",
-        "Pulling Mechanism": "Servo/AC Motors",
-        "No. Of Heads": "10 or 14 heads",
-        "Packaging Material": "Heat sealable laminated roll",
-        "Sealing System": "Pneumatic/servo driven heat sealers",
-        "Machine Body": "SS/MS with powder coated",
-        "Product Contact Parts": "SS-304",
-        "Power": "5 kw, 440v, 3 phase",
-        "Control System": "PLC (Programmable logic control), schneider",
-        "Temperature Control": "PID, Through PLC",
-        "Unwinding System": "Motorized",
-        "Compressed Air": "8 Cfm @ 6 bar",
-        "Dimension (LXBXH)": "2100X1300X3000 mm (Approx)",
-        "Machine Weight": "1 Tonne (Approx)",
-        "Products": "Chips, Namkeen, Whole spices, Pulses, Dry fruits, Sugar, Sooji etc."
-    };
+    const searchParams = useSearchParams();
+    const machineId = searchParams.get("name");
+    console.log(machineId);
+
+    const machine = data.products.find((product) => product["Product Name"] === machineId);
 
     return (
         <>
@@ -35,10 +20,10 @@ const Machine = () => {
                 {/* Main Content */}
                 <div className="flex flex-col md:flex-row items-center md:items-start w-10/12 justify-center mx-auto">
                     <div className="md:w-1/2 p-4">
-                        <img src={`/SAMP/${machine["Product Image"]}`} alt={machine["Product Name"]} className="w-full h-auto bg-white" />
+                        <img src={`/${machine['Product Category']}/${machine["Product Image"]}`} alt={machine["Product Name"]} className="w-full h-auto bg-white" />
                         <div className="flex space-x-4 pt-4 w-2/3">
                             {[...Array(5)].map((_, idx) => (
-                                <img key={idx} src={`/SAMP/${machine["Product Image"]}`} alt={machine["Product Name"]} className="w-3/12 h-auto bg-white p-3" />
+                                <img key={idx} src={`/${machine["Product Category"]}/${machine["Product Image"]}`} alt={machine["Product Name"]} className="w-3/12 h-auto bg-white p-3" />
                             ))}
                         </div>
                     </div>

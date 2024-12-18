@@ -3,7 +3,7 @@ import data from "./data.json";
 import Link from "next/link";
 
 const Products = () => {
-	const [selectedPCategory, setSelectedPCategory] = useState("all"); // also: "cpom", "nm", "samp"
+	const [selectedPCategory, setSelectedPCategory] = useState("all"); 
 	const products = data.products;
 	const CPOMProducts = products.cpom.map((product) => ({
 		...product,

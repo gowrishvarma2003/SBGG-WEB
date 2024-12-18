@@ -3,28 +3,19 @@ import data from "./data.json";
 import Link from "next/link";
 
 const Products = () => {
-	const [selectedPCategory, setSelectedPCategory] = useState("all"); // also: "cpom", "nm", "samp"
+	const [selectedPCategory, setSelectedPCategory] = useState("ALL"); // also: "CPOM", "NM", "SAMP"
 	const products = data.products;
-	const CPOMProducts = products.cpom.map((product) => ({
-		...product,
-		category: "cpom",
-	}));
-	const NMProducts = products.nm.map((product) => ({
-		...product,
-		category: "nm",
-	}));
-	const SAMPProducts = products.samp.map((product) => ({
-		...product,
-		category: "samp",
-	}));
+	const CPOMProducts = products.filter((product) => product['Product Category'] == 'CPOM');
+	const NMProducts = products.filter((product) => product['Product Category'] == 'NM');
+	const SAMPProducts = products.filter((product) => product['Product Category'] == 'SAMP');
 	const allProducts = [...CPOMProducts, ...NMProducts, ...SAMPProducts];
 
 	const productsToShow =
-		selectedPCategory === "all"
+		selectedPCategory === "ALL"
 			? allProducts
-			: selectedPCategory === "cpom"
+			: selectedPCategory === "CPOM"
 			? CPOMProducts
-			: selectedPCategory === "nm"
+			: selectedPCategory === "NM"
 			? NMProducts
 			: SAMPProducts;
 
@@ -71,41 +62,41 @@ const Products = () => {
 					<div className="w-full flex flex-wrap justify-center items-center gap-2 my-4 text-base lg:text-lg xl:text-xl">
 						<div
 							className={`${
-								selectedPCategory == "all"
+								selectedPCategory == "ALL"
 									? "bg-[#4DBF38] text-white font-semibold"
 									: "bg-white text-[#4DBF38]"
 							} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
-							onClick={() => setSelectedPCategory("all")}
+							onClick={() => setSelectedPCategory("ALL")}
 						>
 							All Machines
 						</div>
 						<div
 							className={`${
-								selectedPCategory == "cpom"
+								selectedPCategory == "CPOM"
 									? "bg-[#4DBF38] text-white font-semibold"
 									: "bg-white text-[#4DBF38]"
 							} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
-							onClick={() => setSelectedPCategory("cpom")}
+							onClick={() => setSelectedPCategory("CPOM")}
 						>
 							Packing Machines
 						</div>
 						<div
 							className={`${
-								selectedPCategory == "nm"
+								selectedPCategory == "NM"
 									? "bg-[#4DBF38] text-white font-semibold"
 									: "bg-white text-[#4DBF38]"
 							} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
-							onClick={() => setSelectedPCategory("nm")}
+							onClick={() => setSelectedPCategory("NM")}
 						>
 							Namkeen Machines
 						</div>
 						<div
 							className={`${
-								selectedPCategory == "samp"
+								selectedPCategory == "SAMP"
 									? "bg-[#4DBF38] text-white font-semibold"
 									: "bg-white text-[#4DBF38]"
 							} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
-							onClick={() => setSelectedPCategory("samp")}
+							onClick={() => setSelectedPCategory("SAMP")}
 						>
 							Oil Machines
 						</div>
@@ -118,7 +109,7 @@ const Products = () => {
 							>
 								<img
 									src={
-										product.category +
+										product["Product Category"] +
 										"/" +
 										product["Product Image"]
 									}
@@ -134,7 +125,7 @@ const Products = () => {
 									</div>
 									<div className="w-14 h-36 flex items-start justify-center py-2 relative">
 										<Link
-											href={`/products/${product.category}/${product["Product Name"]}`}
+											href={`/products/${product["Product Category"]}/${product["Product Name"]}`}
 											className="z-20"
 										>
 											<div className="w-14 h-14 flex justify-center items-center rounded-full border border-[#4DBF38] bg-[#4DBF38] hover:bg-white bg-opacity-25 cursor-pointer relative z-30">

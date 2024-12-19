@@ -50,16 +50,16 @@ const Footer = () => {
 				</div>
 				<div className="w-full lg:w-2/12 flex flex-col gap-5 items-start">
 					<h3 className="text-white text-xl">Quick Links</h3>
-					<Link href="/" className="text-white text-sm hover:underline">
+					<Link href="/#slider" className="text-white text-sm hover:underline">
 						Home
 					</Link>
-					<Link href="/about" className="text-white text-sm hover:underline">
+					<Link href="/#about" className="text-white text-sm hover:underline">
 						About
 					</Link>
-					<Link href="/services" className="text-white text-sm hover:underline">
+					<Link href="/#services" className="text-white text-sm hover:underline">
 						Services
 					</Link>
-					<Link href="/contact" className="text-white text-sm hover:underline">
+					<Link href="/#contact" className="text-white text-sm hover:underline">
 						Contact
 					</Link>
 				</div>
@@ -67,7 +67,7 @@ const Footer = () => {
 					<h3 className="text-white text-xl">Get in Touch</h3>
                     <div className="w-full flex gap-5 items-center">
                         <img src="email_icon.png" alt="location" className="h-8" />
-                        <p className="text-white text-sm">info@yourdomain.com</p>
+                        <p className="text-white text-sm">contact@shripanchamiglobalgears.com</p>
                     </div>
                     <div className="w-full flex gap-5 items-center">
                         <img src="phone_icon.png" alt="phone" className="h-8" />
@@ -80,7 +80,7 @@ const Footer = () => {
 
 			<div className="w-full flex justify-center items-center py-5">
 				<p className="text-white text-sm">
-					© 2021 SBGG. All rights reserved.
+					© 2025 Shri Panchami Global Gears. All rights reserved.
 				</p>
 			</div>
 		</div>

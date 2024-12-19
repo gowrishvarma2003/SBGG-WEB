@@ -55,7 +55,7 @@ const Services = () => {
 	return (
 		<div className="w-full p-8 flex flex-col justify-center items-center mb-8">
 			<h1 className="text-2xl lg:text-3xl xl:text-4xl" style={{ color: "#4DBF38" }}>
-				ABOUT<span className="font-bold pl-2">US</span>
+				Services
 			</h1>
 			<p
 				className="justify-center text-center bsm:w-3/4 sm:text-base bsm:text-lg md:text-xl lg:text-2xl mt-4 pt-4 mb-10"
@@ -80,7 +80,7 @@ const Services = () => {
 						data-aos-delay={index * 10}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
-						className={`${hoveredIndex == index ? 'bg-[#4DBF38]' : 'bg-white'} py-6 px-6 shadow-lg text-left relative transform transition-transform duration-150 ease-in-out hover:scale-105 hover:shadow-xl rounded-t-md`}
+						className={`${hoveredIndex == index ? 'bg-[#4DBF38]' : 'bg-white'} py-6 px-6 shadow-lg text-left relative transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl rounded-t-md`}
 					>
 						<div className="w-14 h-12 py-10 border border-[#4DBF38] flex justify-center items-center rounded-lg bg-white">
 							<img
@@ -91,11 +91,11 @@ const Services = () => {
 						</div>
 
 						<hr className="border-gray-300 my-4" />
-						<h2 className={`${hoveredIndex == index ? 'text-white' : 'text-black'} text-lg lg:text-xl xl:text-2xl font-semibold mb-2 pt-0`}>
+						<h2 className={`${hoveredIndex == index ? 'text-white' : 'text-black'} text-lg lg:text-xl xl:text-2xl font-semibold mb-2 pt-0 pointer-events-none`}>
 							{service.title}
 						</h2>
 						<p
-							className={`${hoveredIndex == index ? 'text-gray-200 opacity-90' : 'text-gray-700'} text-sm lg:text-base xl:text-lg pb-12`}
+							className={`${hoveredIndex == index ? 'text-gray-200 opacity-90' : 'text-gray-700'} text-sm lg:text-base xl:text-lg pb-12 pointer-events-none`}
 							style={{ width: "85%" }}
 						>
 							{service.description}

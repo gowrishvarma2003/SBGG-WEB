@@ -3,18 +3,27 @@
 @tailwind utilities;
 
 .thin-scrollbar {
-    scrollbar-color: green var(--scrollbar-background-color);
+	scrollbar-color: green var(--scrollbar-background-color);
 }
 
 /* Scrollbar width and thumb styling */
 .thin-scrollbar::-webkit-scrollbar {
-    width: 2px;
+	width: 2px;
 }
 
 .thin-scrollbar::-webkit-scrollbar-thumb {
-    background-color: green;
+	background-color: green;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
+}
+
+.no-scrollbar {
+	overflow: auto;
+	scrollbar-width: none; /* For Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none; /* For Chrome, Safari, and Edge */
 }

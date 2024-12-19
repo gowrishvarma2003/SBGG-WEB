@@ -6,17 +6,17 @@ export default function NavBar() {
     const [activeNav, setActiveNav] = useState("#slider"); // Default active section
 
     const navItems = [
-        { name: "Home", href: "#slider" },
-        { name: "About", href: "#about" },
-        { name: "Services", href: "#services" },
-        { name: "Products", href: "#products" },
-        { name: "Contact", href: "#contact" }, // Existing Contact link
+        { name: "Home", href: "/#slider" },
+        { name: "About", href: "/#about" },
+        { name: "Services", href: "/#services" },
+        { name: "Products", href: "/#products" },
+        { name: "Contact", href: "/#contact" }, // Existing Contact link
     ];
 
     return (
         <nav className="p-4 w-full min-h-14 shadow-lg fixed top-0 z-50 bg-white opacity-90">
             <div className="h-full flex flex-col lg:flex-row lg:justify-end gap-3">
-                <div className="flex lg:flex-1 sm:justify-center lg:justify-end items-center">
+                <div className="flex lg:flex-1 sm:justify-center lg:justify-end items-center lg:mr-24">
                     <img
                         src="/logo.png"
                         alt="Company Logo"

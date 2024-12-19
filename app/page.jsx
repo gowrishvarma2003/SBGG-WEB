@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className="h-20"></div>
+      <div className="h-16 lg:h-20"></div>
       <div id="slider"><Slider /></div>
       <div id="about"><About /></div>
       <div id="services"><Services /></div>

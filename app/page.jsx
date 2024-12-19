@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
+      <div className="h-20"></div>
       <Slider />
       <About />
       <Services />

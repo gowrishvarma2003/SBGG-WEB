@@ -30,7 +30,7 @@ const Machine = () => {
     };
 
     const redirectToWhatsApp = () => {
-        const phoneNumber = "6303635448";
+        const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
         const message = `Hello, I am interested in the ${machine["Product Name"]}. Can you provide more details?`;
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.location.href = url;

@@ -71,7 +71,7 @@ const Footer = () => {
                     </div>
                     <div className="w-full flex gap-5 items-center">
                         <img src="phone_icon.png" alt="phone" className="h-8" />
-                        <p className="text-white text-sm">+91 98450 12345</p>
+                        <p className="text-white text-sm">+91 99894 64555</p>
                     </div>
 				</div>
 			</div>
@@ -80,7 +80,7 @@ const Footer = () => {
 
 			<div className="w-full flex justify-center items-center py-5">
 				<p className="text-white text-sm">
-					© 2025 Shri Panchami Global Gears. All rights reserved.
+					© 2024 Shri Panchami Global Gears. All rights reserved.
 				</p>
 			</div>
 		</div>

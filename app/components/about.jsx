@@ -28,8 +28,8 @@ const About = () => {
 							className="
                             bsm:w-5/6
                             justify-center text-center text-pretty 
-                            text-ssm bsm:text-sm md:text-base lg:text-lg my-4 
-                            pt-8 pb-20 bsm:pb-36 lg:pb-48
+                            text-sm  md:text-base lg:text-lg my-12 bsm:my-8 
+                            pt-8 pb-20 bsm:pb-36 lg:pb-40
                             "
 							style={{ color: "#7F7F7F" }}
 						>

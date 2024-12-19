@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import data from "./data.json";
 import Link from "next/link";
+import { TbExternalLink } from "react-icons/tb";
 
 const Products = () => {
 	const [selectedPCategory, setSelectedPCategory] = useState("ALL"); // also: "CPOM", "NM", "SAMP"
 	const products = data.products;
-	const CPOMProducts = products.filter((product) => product['Product Category'] == 'CPOM');
-	const NMProducts = products.filter((product) => product['Product Category'] == 'NM');
-	const SAMPProducts = products.filter((product) => product['Product Category'] == 'SAMP');
+	const CPOMProducts = products.filter(
+		(product) => product["Product Category"] == "CPOM"
+	);
+	const NMProducts = products.filter(
+		(product) => product["Product Category"] == "NM"
+	);
+	const SAMPProducts = products.filter(
+		(product) => product["Product Category"] == "SAMP"
+	);
 	const allProducts = [...CPOMProducts, ...NMProducts, ...SAMPProducts];
 
 	const productsToShow =
@@ -105,7 +112,7 @@ const Products = () => {
 						{productsToShow.map((product, index) => (
 							<div
 								key={index}
-								className="w-full h-max bg-white rounded-md overflow-hidden shadow-md"
+								className="w-full h-max bg-white border-t-2 border-[#4DBF38] rounded-md overflow-hidden shadow-md"
 							>
 								<img
 									src={
@@ -117,28 +124,25 @@ const Products = () => {
 									className="w-full h-48 object-contain my-5"
 								/>
 								<div className="w-full border-t-2 border-neutral-300 mt-5"></div>
-								<div className="w-full h-full px-4 pb-1 flex items-start justify-between hover:bg-[#4DBF38] hover:bg-opacity-25 transition-colors duration-300">
-									<div className="flex-1 h-full flex items-start justify-start text-start pr-2 py-2">
-										<h2 className="text-lg font-semibold text-[#052A47] line-clamp-4 pointer-events-none">
-											{product["Product Name"]}
+								<div className="bg-white w-full h-28 px-4 pb-1 flex items-start justify-between hover:bg-[#4DBF38] hover:bg-opacity-25 transition-colors duration-300">
+									<div className="flex-1 h-full flex items-start justify-start text-start py-2">
+										<h2 className="font-semibold text-lg text-[#052A47] line-clamp-3 pointer-events-none text-pretty">
+											{product["Product Name"].toUpperCase()}
 										</h2>
 									</div>
-									<div className="w-14 h-36 flex items-start justify-center py-2 relative">
-										<Link
-											href={`/machine?name=${product["Product Name"]}`}
-											className="z-20"
-										>
-											<div className="w-14 h-14 flex justify-center items-center rounded-full border border-[#4DBF38] bg-[#4DBF38] hover:bg-white bg-opacity-25 cursor-pointer relative z-30">
-												<img
-													src="cross_arrow.png"
-													alt="arrow cross"
-													className="relative w-7 h-7 z-40"
-												/>
-											</div>
-										</Link>
-									</div>
 								</div>
-								<div className="w-full h-3 bg-[#4DBF38]"></div>
+								<div className={`w-full bg-[#4DBF38] text-white hover:bg-white hover:text-black border-t hover:border-[#4DBF38] transition-all duration-300`}>
+									<Link
+										href={`/machine?name=${product["Product Name"]}`}
+										className="z-20"
+										legacyBehavior
+									>
+										<a className="w-full h-full flex items-center justify-center font-semibold text-lg py-2 gap-1">
+											<p className="pointer-events-none">View Product</p>
+											<TbExternalLink />
+										</a>
+									</Link>
+								</div>
 							</div>
 						))}
 					</div>

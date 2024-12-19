@@ -110,7 +110,7 @@ const Slider = () => {
 			>
 				<div className="hidden bsm:flex flex-col items-center justify-center sm:w-0 bsm:w-32 md:w-32 lg:w-48 xl:w-64 h-full flex-shrink-0 relative">
 					<div
-						className="w-11 h-11 transform origin-center rotate-45 bg-transparent hover:bg-[#4DBF38] border border-white cursor-pointer relative"
+						className="w-11 h-11 transform origin-center rotate-45 bg-transparent hover:bg-[#4DBF38] transition-all duration-150 border border-white cursor-pointer relative"
 						onClick={prevSlide}
 					></div>
 					<img
@@ -155,7 +155,7 @@ const Slider = () => {
 				</div>
 				<div className="hidden bsm:flex flex-col items-center justify-center sm:w-0 bsm:w-32 md:w-32 lg:w-48 xl:w-64 h-full flex-shrink-0 relative">
 					<div
-						className="w-11 h-11 transform origin-center rotate-45 bg-transparent hover:bg-[#4DBF38] border border-white cursor-pointer relative"
+						className="w-11 h-11 transform origin-center rotate-45 bg-transparent hover:bg-[#4DBF38] border transition-all duration-150 border-white cursor-pointer relative"
 						onClick={nextSlide}
 					></div>
 					<img

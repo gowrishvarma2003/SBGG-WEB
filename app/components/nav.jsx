@@ -29,7 +29,7 @@ export default function NavBar() {
                 </div>
                 <div className="lg:hidden h-1 border-t-2 border-neutral-100 w-full"></div>
                 <div className="h-full flex sm:flex-col bsm:flex-row bsm:justify-between gap-5 px-3">
-                    <div className="flex sm:justify-center lg:justify-end items-center gap-x-5">
+                    <div className="flex flex-wrap sm:justify-center lg:justify-end items-center gap-x-5">
                         {navItems.map((item, index) => (
                             <div className="flex flex-col" key={index}>
                                 <Link href={item.href} legacyBehavior>

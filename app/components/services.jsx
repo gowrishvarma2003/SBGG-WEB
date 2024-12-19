@@ -53,12 +53,12 @@ const Services = () => {
 	];
 
 	return (
-		<div className="w-full p-8 flex flex-col justify-center items-center mb-8">
+		<div className="w-full mb-8 mt-24 flex flex-col justify-center items-center">
 			<h1 className="text-2xl lg:text-3xl xl:text-4xl" style={{ color: "#4DBF38" }}>
 				Services
 			</h1>
 			<p
-				className="justify-center text-center bsm:w-3/4 sm:text-base bsm:text-lg md:text-xl lg:text-2xl mt-4 pt-4 mb-10"
+				className="justify-center text-center w-3/4 sm:text-base bsm:text-lg md:text-xl lg:text-2xl mt-4 pt-4 mb-10"
 				style={{ color: "#7F7F7F" }}
 			>
 				Shripanchami Global Gears specializes in providing high-quality

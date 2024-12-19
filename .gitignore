@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+# secrets
+/sheets-credentials.json
+
 # testing
 /coverage
 

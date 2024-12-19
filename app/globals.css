@@ -14,3 +14,7 @@
 .thin-scrollbar::-webkit-scrollbar-thumb {
     background-color: green;
 }
+
+html {
+    scroll-behavior: smooth;
+}

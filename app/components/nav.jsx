@@ -3,12 +3,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function NavBar() {
+    const [activeNav, setActiveNav] = useState("#slider"); // Default active section
 
     const navItems = [
-        { name: "Home", href: "/contact", isActive: true },
-        { name: "Service", href: "/about", isActive: false },
-        { name: "Product", href: "/contact", isActive: false },
-        { name: "Pricing", href: "/about", isActive: false },
+        { name: "Home", href: "#slider" },
+        { name: "About", href: "#about" },
+        { name: "Services", href: "#services" },
+        { name: "Products", href: "#products" },
+        { name: "Contact", href: "#contact" }, // Existing Contact link
     ];
 
     return (
@@ -19,6 +21,7 @@ export default function NavBar() {
                         src="/logo.png"
                         alt="Company Logo"
                         className="inline-block h-8 w-8 mr-2 self-center"
+                        onClick={() => window.location.href = '/'}
                     />
                     <span className="text-black text-lg font-bold lg:mr-10">
                         Shri Panchami Global Gears
@@ -30,24 +33,23 @@ export default function NavBar() {
                         {navItems.map((item, index) => (
                             <div className="flex flex-col" key={index}>
                                 <Link href={item.href} legacyBehavior>
-                                    <a className={`text-black text-base ${item.isActive ? 'font-bold' : ''} hover:text-gray-700 py-2 sm:px-1 bsm:px-2`}>
+                                    <a
+                                        onClick={() => setActiveNav(item.href)}
+                                        className={`text-black text-base ${activeNav === item.href ? "font-bold text-green-500" : ""
+                                            } hover:text-gray-700 py-2 sm:px-1 bsm:px-2`}
+                                    >
                                         {item.name}
                                     </a>
                                 </Link>
                                 <div
-                                    className={`h-1 w-full ${item.isActive
-                                        ? "border-t-4 border-[#4DBF38]"
-                                        : "border-t-2 border-neutral-200"
+                                    className={`h-1 w-full ${activeNav === item.href
+                                            ? "border-t-4 border-[#4DBF38]"
+                                            : "border-t-2 border-neutral-200"
                                         }`}
                                 ></div>
                             </div>
                         ))}
                     </div>
-                    <Link href="/contact" legacyBehavior>
-                        <a className="flex font-semibold rounded-sm bg-gradient-to-b hover:from-[#4DBF38] hover:to-[#4cbf38cb] from-white to-white bg-white text-[#4DBF38] hover:text-white border border-[#4DBF38] transition-all duration-500 delay-100 justify-center items-center text-center px-3 lg:ml-20 text-nowrap py-2">
-                            Contact us
-                        </a>
-                    </Link>
                 </div>
             </div>
         </nav>

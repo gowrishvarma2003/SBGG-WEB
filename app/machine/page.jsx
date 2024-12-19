@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import NavBar from "../components/nav";
 import Contact from "../components/contact";
@@ -9,17 +9,34 @@ import data from "../components/data.json";
 const Machine = () => {
 	const searchParams = useSearchParams();
 	const machineId = searchParams.get("name");
-	console.log(machineId);
 
 	const machine = data.products.find(
 		(product) => product["Product Name"] === machineId
 	);
 
+	// Ref for specification scrolling
+	const specRef = useRef(null);
+
+	// Scroll handler for specification
+	const scrollToSpec = () => {
+		specRef.current.scrollIntoView({ behavior: "smooth" });
+	};
+
+	// Redirect to WhatsApp
+	const redirectToWhatsApp = () => {
+		const phoneNumber = "6303635448"; // Replace with your WhatsApp number
+		const message = `Hello, I am interested in the ${machine["Product Name"]}. Can you provide more details?`;
+		const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+			message
+		)}`;
+		window.location.href = url;
+	};
+
 	return (
 		<div className="w-full min-h-dvh">
 			<NavBar />
 			<div className="h-56 bsm:h-40 lg:h-28 bg-gray-100"></div>
-			<div className="w-full bg-gray-100  mb-10">
+			<div className="w-full bg-gray-100 mb-10">
 				<div className="flex flex-col md:flex-row items-center md:items-start w-10/12 justify-center mx-auto md:gap-x-8">
 					<div className="w-full bsm:3/4 md:w-1/2 lg- flex justify-center items-center bg-gray-200 rounded-xl">
 						<img
@@ -45,48 +62,50 @@ const Machine = () => {
 						) : null}
 
 						<div className="w-full flex lg:gap-x-4 gap-y-4 pt-4 flex-col lg:flex-row text-sm bsm:text-base">
-							<button className={`shadow-md hover:bg-blue-500 hover:text-white text-blue-500 bg-white transition-all duration-200 delay-100 px-4 py-2 rounded-lg`}>
+							<button
+								onClick={scrollToSpec}
+								className="shadow-md hover:bg-blue-500 hover:text-white text-blue-500 bg-white transition-all duration-200 delay-100 px-4 py-2 rounded-lg"
+							>
 								View More Details
 							</button>
-							<button className={`shadow-md hover:bg-green-500 hover:text-white text-green-500 bg-white transition-all duration-200 delay-100 px-4 py-2 rounded-lg`}>
+							<button
+								onClick={redirectToWhatsApp}
+								className="shadow-md hover:bg-green-500 hover:text-white text-green-500 bg-white transition-all duration-200 delay-100 px-4 py-2 rounded-lg"
+							>
 								Get Best Quote
 							</button>
 						</div>
 					</div>
 				</div>
 
-				<div className="mt-8 bg-white p-6 shadow-lg rounded-lg w-10/12 justify-center mx-auto">
-					<h2
-						className="text-2xl font-bold mb-4 bg-neutral-900 px-2 py-1 text-white rounded-t-lg"
-					>
+				<div
+					ref={specRef}
+					className="mt-8 bg-white p-6 shadow-lg rounded-lg w-10/12 justify-center mx-auto"
+				>
+					<h2 className="text-2xl font-bold mb-4 bg-neutral-900 px-2 py-1 text-white rounded-t-lg">
 						Product Specification
 					</h2>
 					<table className="w-full border-collapse border border-gray-200">
 						<tbody>
-							{Object.entries(machine).map(
-								([key, value], index) => {
-									if (
-										key === "Product Image" ||
-										key === "Product Name" ||
-										key === "Products"
-									) {
-										return null;
-									}
-									return (
-										<tr
-											key={index}
-											className="border-b border-gray-200"
-										>
-											<td className="p-3 font-bold text-gray-700 text-sm bsm:text-base">
-												{key}
-											</td>
-											<td className="p-3 text-gray-600 text-sm bsm:text-base">
-												{value}
-											</td>
-										</tr>
-									);
+							{Object.entries(machine).map(([key, value], index) => {
+								if (
+									key === "Product Image" ||
+									key === "Product Name" ||
+									key === "Products"
+								) {
+									return null;
 								}
-							)}
+								return (
+									<tr key={index} className="border-b border-gray-200">
+										<td className="p-3 font-bold text-gray-700 text-sm bsm:text-base">
+											{key}
+										</td>
+										<td className="p-3 text-gray-600 text-sm bsm:text-base">
+											{value}
+										</td>
+									</tr>
+								);
+							})}
 						</tbody>
 					</table>
 				</div>

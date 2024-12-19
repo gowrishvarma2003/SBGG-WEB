@@ -9,19 +9,18 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import PricingCard from "./components/pricing";
 import Products from "./components/products";
-
 export default function Home() {
   return (
     <>
       <NavBar />
       <div className="h-20"></div>
-      <Slider />
-      <About />
-      <Services />
-      <Products />
-      <Testimonies />
-      <PricingCard />
-      <Contact />
+      <div id="slider"><Slider /></div>
+      <div id="about"><About /></div>
+      <div id="services"><Services /></div>
+      <div id="products"><Products /></div>
+      <div id="testimonies"><Testimonies /></div>
+      <div id="pricing"><PricingCard /></div>
+      <div id="contact"><Contact /></div>
       <Footer />
     </>
   );

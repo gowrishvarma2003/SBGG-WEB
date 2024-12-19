@@ -8,13 +8,13 @@ const Testimonies = () => {
     {
       id: 1,
       text: "As the Director of Shripanchami Global Gears, Bokkasam Rupa Jyothi brings years of leadership and strategic vision to the company. With a deep understanding of the machinery industry and a commitment to operational excellence, Rupa Jyothi plays a pivotal role in driving the company’s growth and ensuring that the organization remains at the forefront of technological innovation. She is dedicated to fostering an environment of teamwork, collaboration, and continuous improvement, ensuring that Shripanchami Global Gears delivers high-quality products and services to clients worldwide.",
-      name: "Bokkasam Rupa Jyothi",
+      name: "Rupa Jyothi Bokkasam",
       role: "Director",
     },
     {
       id: 2,
       text: "A dynamic leader and visionary, Bokkasam Lalith Sai Manoj serves as the Chief Executive Officer of Shripanchami Global Gears. With a passion for technology and a strong business acumen, he is instrumental in shaping the company’s strategic direction and growth. Lalith Sai Manoj leads by example, constantly pushing the boundaries of innovation and ensuring that Shripanchami Global Gears maintains its reputation for quality and excellence in machinery solutions. His focus on customer satisfaction and long-term business relationships has helped the company evolve into a global leader in its field.",
-      name: "Bokkasam Lalith Sai Manoj",
+      name: "Sai Manoj Bokkasam",
       role: "CEO",
     },
     {
@@ -24,7 +24,7 @@ const Testimonies = () => {
       role: "Marketing Manager",
     },
   ];
-  
+
 
   const nextSlide = () => {
     setFade(false);

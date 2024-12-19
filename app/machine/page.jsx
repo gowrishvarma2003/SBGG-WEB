@@ -14,6 +14,15 @@ const Machine = () => {
 		(product) => product["Product Name"] === machineId
 	);
 
+
+    if (!machine) {
+        return (
+            <div className="w-full min-h-dvh flex justify-center items-center">
+                <p className="text-gray-700 text-lg">Machine not found.</p>
+            </div>
+        );
+    }
+
 	// Ref for specification scrolling
 	const specRef = useRef(null);
 

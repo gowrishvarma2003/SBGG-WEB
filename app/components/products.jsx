@@ -21,10 +21,10 @@ const Products = () => {
 		selectedPCategory === "ALL"
 			? allProducts
 			: selectedPCategory === "CPOM"
-			? CPOMProducts
-			: selectedPCategory === "NM"
-			? NMProducts
-			: SAMPProducts;
+				? CPOMProducts
+				: selectedPCategory === "NM"
+					? NMProducts
+					: SAMPProducts;
 
 	return (
 		<div className="w-full min-h-dvh flex flex-col">
@@ -68,42 +68,38 @@ const Products = () => {
 					</div>
 					<div className="w-full flex flex-wrap justify-center items-center gap-2 my-4 text-base lg:text-lg xl:text-xl">
 						<div
-							className={`${
-								selectedPCategory == "ALL"
-									? "bg-[#4DBF38] text-white font-semibold"
-									: "bg-white text-[#4DBF38]"
-							} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
+							className={`${selectedPCategory == "ALL"
+								? "bg-[#4DBF38] text-white font-semibold"
+								: "bg-white text-[#4DBF38]"
+								} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
 							onClick={() => setSelectedPCategory("ALL")}
 						>
 							All Machines
 						</div>
 						<div
-							className={`${
-								selectedPCategory == "CPOM"
-									? "bg-[#4DBF38] text-white font-semibold"
-									: "bg-white text-[#4DBF38]"
-							} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
-							onClick={() => setSelectedPCategory("CPOM")}
-						>
-							Packing Machines
-						</div>
-						<div
-							className={`${
-								selectedPCategory == "NM"
-									? "bg-[#4DBF38] text-white font-semibold"
-									: "bg-white text-[#4DBF38]"
-							} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
+							className={`${selectedPCategory == "NM"
+								? "bg-[#4DBF38] text-white font-semibold"
+								: "bg-white text-[#4DBF38]"
+								} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
 							onClick={() => setSelectedPCategory("NM")}
 						>
 							Namkeen Machines
 						</div>
 						<div
-							className={`${
-								selectedPCategory == "SAMP"
-									? "bg-[#4DBF38] text-white font-semibold"
-									: "bg-white text-[#4DBF38]"
-							} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
+							className={`${selectedPCategory == "SAMP"
+								? "bg-[#4DBF38] text-white font-semibold"
+								: "bg-white text-[#4DBF38]"
+								} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
 							onClick={() => setSelectedPCategory("SAMP")}
+						>
+							Packing Machines
+						</div>
+						<div
+							className={`${selectedPCategory == "CPOM"
+								? "bg-[#4DBF38] text-white font-semibold"
+								: "bg-white text-[#4DBF38]"
+								} w-auto py-2 px-6 cursor-pointer transition-all duration-300 rounded-sm`}
+							onClick={() => setSelectedPCategory("CPOM")}
 						>
 							Oil Machines
 						</div>

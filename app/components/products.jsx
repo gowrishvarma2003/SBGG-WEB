@@ -27,7 +27,7 @@ const Products = () => {
 					: SAMPProducts;
 
 	return (
-		<div className="w-full min-h-dvh flex flex-col">
+		<div className="w-full min-h-[calc(100dvh+50dvh)] bsm:min-h-[calc(100dvh+25dvh)] md:min-h-dvh flex flex-col">
 			<div
 				className="w-full h-full flex-1 overflow-clip"
 				style={{ position: "relative" }}
